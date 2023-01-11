@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANPR SYSTEM</title>
+    {% block stylesheets %}
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}" />
+  {% endblock stylesheets %}
+</head>
+<body class="login-page" style="min-height: 512.8px;">
+    <div class="login-box">
+        {% block content %}
+            
+        {% endblock content %} 
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+Vehicle[
+	Owner Name
+	License Plate
+	Mobile No
+	Model
+	Role
+	status
+]
+
+
+Logs[
+    vehicle
+    time
+    direction
+]
+
+users[
+	username
+	first_name
+	last_name
+	email
+]

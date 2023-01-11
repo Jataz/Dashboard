@@ -1,0 +1,50 @@
+{% load static %}
+    <a href="{% url 'dashboard' %}" class="brand-link">
+      <img src=""  class="brand-image img-circle elevation-3" style="opacity: .8">
+      <p class="brand-text font-weight-light">ANPR SYSTEM</p>
+    </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+              <!-- Sidebar user panel (optional) -->
+
+              <!-- Sidebar Menu -->
+              <nav class="mt-2">
+                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                      <li class="nav-item">
+                          <a href="{% url 'dashboard' %}" class="nav-link">
+                              <i class="nav-icon fas fa-chalkboard"></i>
+                              <p class="title">Dashboard</p>
+                          </a>
+                      </li> 
+                      
+                      <li class="nav-item">
+                        <a href="{% url 'vehicles' %}"  class="nav-link">
+                            <i class="nav-icon fas fa-car"></i>
+                            <p class="title">Vehicles</p>
+                        </a>
+                      </li> 
+
+                      <li class="nav-item">
+                        <a href="{% url 'users' %}"  class="nav-link">
+                            <i class="nav-icon fas fa-user-cog"></i>
+                            <p class="title">Users</p>
+                        </a>
+                      </li> 
+<!--                       <li class="nav-item">
+                        <a  href=""  class="nav-link">
+                            <i class="nav-icon fas fa-key"></i>
+                            <p class="title">Change Password</p>
+                        </a>
+                    </li> -->
+                      <li class="nav-item">
+                          <a  href="{% url 'logout' %}"  class="nav-link">
+                              <i class="nav-icon fas fa-power-off"></i>
+                              <p class="title">Logout</p>
+                          </a>
+                      </li>
+                  </ul>
+              </nav>
+              <!-- /.sidebar-menu -->
+          </div>
+

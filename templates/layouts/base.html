@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {% block title %}ANPR SYSTEM{% endblock %}
+  </title>
+
+
+  {% block stylesheets %}
+
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}" />
+      <!-- Datatables -->
+  <link rel="stylesheet" href="{% static 'plugins/datatables-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/datatables-responsive/css/responsive.bootstrap4.min.css' %}"> 
+  {% endblock stylesheets %}
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  {% include 'includes/navigation.html' %}
+
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-blue elevation-3">
+    {% include 'includes/sidebar.html' %}
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    {% block content %}
+            
+    {% endblock content %} 
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  {% include 'includes/footer.html' %}
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+  <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'dist/js/adminlte.min.js' %}"></script>
+
+  <!-- DataTables  & Plugins -->
+<script src="{% static 'plugins/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+
+<script src="{% static 'plugins/datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+
+
+ <!-- DataTables scripts -->
+
+ <script>
+  $("#datatable").DataTable({
+    "paging": true,
+    "pagelength":10,
+    "lengthChange": true,
+    "searching": true,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "responsive": true,
+  })
+ </script>
+</body>
+</html>
